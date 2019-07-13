@@ -1,0 +1,34 @@
+.error-404{
+	position: relative;
+	.page-content{
+		min-height: 76vh;
+		h1{
+			font-size: 3em;
+			margin-top: 15%;
+		}
+		p{
+			text-align: center;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 900px){
+	.error-404 .page-content{
+		padding: 3em;
+	}
+
+}
+
+@media only screen and (max-width: 650px){
+	.error-404 .page-content{
+		h1{
+			padding-top: 8vh;
+			font-size: 2em;
+		}
+		h2{
+			font-size: 1.3em;
+		}
+	}
+
+}

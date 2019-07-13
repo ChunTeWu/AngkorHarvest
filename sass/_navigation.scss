@@ -1,0 +1,131 @@
+.main-navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 65px;
+	z-index: 9999;
+	background-color: white;
+
+	li{
+		list-style: none;
+		margin-bottom: 0;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.nav-logo {
+		position: absolute;
+		top: 0;
+		left: 9%;
+		width: 70px;
+		z-index: 9999;
+	}
+
+	.menu-angkor-menu-container {
+		width: 100%;
+	}
+
+	.menu-angkor-menu-container > ul {
+		display: flex;
+	}
+
+	.menu-angkor-menu-container > ul li {
+		margin: 35px 25px 15px 25px;
+	}
+
+	.menu-angkor-menu-container > ul li:first-child {
+		margin-left: auto;
+	}
+
+	.menu-angkor-menu-container > ul li:last-child {
+		margin-right: 10%;
+	}
+
+	.menu-item {
+		font-size: 16px;
+		letter-spacing: 0.5px;
+	}
+}
+
+
+
+@media only screen and (max-width: 1024px){
+// responsive nav
+.main-navigation{
+
+		// the hamburger icon
+		.menu-toggle{
+			position: relative;
+			width: 50px;
+			height: 50px;
+			display: block;
+			float: right;
+			padding: 0;
+			margin-top: 5px;
+			margin-right: 2%;
+
+			span{
+				display: block;
+				width: 80%;
+				border: 2px solid $colorBrown;
+				border-radius: 5px;
+				opacity: 1;
+			}
+			
+			span:after, span:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 80%;
+				border: 2px solid $colorBrown;
+				border-radius: 5px;
+
+			}
+
+			span:after {
+				top: 12px;
+
+			}
+
+			span:before {
+				top: 34px;
+				
+			}
+		}
+
+		.nav-menu{
+			position: absolute;
+			top: 65px;
+			left: 0;
+			width: 100%;
+			height: 0;
+			overflow: hidden;
+			flex-direction: column;
+			background-color: white;
+			transform: scaleY(0);    
+			transform-origin: top;
+			transition: transform  0.5s;
+
+			.menu-item{
+				width: 100%;
+				margin: 15px 0;
+				text-align: center;
+
+				a{
+					font-size: 1.2em;
+				}
+
+			}
+		}
+	}
+}
+
+.toggled .nav-menu {
+	height: auto;
+	transform: scaleY(1); 
+}
+
+

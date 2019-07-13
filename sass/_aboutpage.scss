@@ -1,0 +1,155 @@
+.sub-nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 60%;
+	padding: 1em;
+
+	#companyLink, #familyLink, #missionLink{
+		cursor: pointer;
+	}
+	h2 {
+		font-size: 26px;
+	}
+}
+
+.my-family, .mission {
+	display: none;
+}
+
+.company, .my-family, .mission {
+	position: relative;
+
+	button {
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		z-index: 10;
+		transform: translate(-50%, 0);
+	}
+}
+
+// reverse the article left and right
+
+//general setting
+.left-right-wrapper{
+	background-color: $colorSection;
+	width: 100%;
+	margin: 0 auto;
+
+	.left-right-content {
+		display: flex;
+		width: 80%;
+		margin: 0 auto;
+
+		// image part settings
+		.img-part{
+			padding: 3em 0;
+			margin-left: 3em;
+			width: 40%;
+			text-align: center;
+			order: 2;
+
+			img {
+				max-width: 100%;
+				max-height: 600px;
+			}
+			figcaption {
+				padding: 0.5em 0;
+				font-style: italic;
+			}
+		}
+
+		// text part settings
+		.text-part{
+			padding: 3em 0;
+			width: 80%;
+			order: 1;
+
+			h2{
+				margin-bottom: 0.5em;
+			}
+
+			p, ul, ol{
+				margin: 0 auto;
+				width: 80%;
+			}
+		}
+	}
+}
+//reverse
+.left-right-wrapper:nth-of-type(odd){
+	background-color: white;
+	.img-part{
+		order: 1;
+	}
+
+	.text-part{
+		order: 2;
+	}
+}
+
+.left-right-wrapper:last-of-type{
+	background-color: $colorSection;
+}
+
+#companyLink.visited,
+#familyLink.visited,
+#missionLink.visited {
+	color: $colorOrange;
+}
+
+#companyLink {
+	color: $colorOrange;
+}
+
+#companyLink.brown {
+	color: $colorBrown;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.sub-nav{
+		flex-direction: column;
+
+		h2 {
+			margin-bottom: 0.7em;
+		}
+	}
+
+	.left-right-wrapper .left-right-content{
+		flex-direction: column;
+		width: 100%;
+		.img-part{
+			margin: 0 auto;
+			width: 100%;
+			order: 2;
+		}
+
+		.text-part{
+			width: 100%;
+			padding-bottom: 2px;
+			order: 1;
+
+			h2 {
+				padding-bottom: 20px;
+			}
+		}
+
+	}
+
+}
+
+
+@media only screen and (max-width: 440px) {
+
+	.sub-nav{
+		width: 90%;
+	}
+
+
+}
+
+
+
+

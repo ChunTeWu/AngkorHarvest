@@ -1,0 +1,114 @@
+.contact {
+	display: flex;
+	padding: 3em 0;
+	background-color: $colorSection;
+	min-height: 720px;
+}
+
+.angkor-form {
+
+	form {
+		width: 65vw;
+
+		#wpforms-77-field_2{
+			max-width: 60%;
+		}
+
+	}
+
+	form > *{
+		margin-left: 20% !important;
+		width: 100% !important;
+	}
+
+	.wpforms-submit-container{
+		.wpforms-submit{
+			position: relative !important;
+			color: white !important;
+			text-transform: uppercase !important;
+			background-color: $colorOrange !important;
+			padding: 15px 40px !important;
+			transition: all ease 0.3s !important;
+		}
+
+		.wpforms-submit:hover {
+			color: white !important;
+			background-color: $colorBrown !important;
+		}
+
+		.wpforms-submit:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 10px;
+			left: 0;
+			background-color: white;
+			visibility: hidden;
+			-webkit-transform: scaleX(0);
+			transform: scaleX(0);
+			-webkit-transition: all 0.3s ease-in-out 0s;
+			transition: all 0.3s ease-in-out 0s;
+		}
+
+		.wpforms-submit:hover:before {
+			visibility: visible;
+			-webkit-transform: scaleX(1);
+			transform: scaleX(1);
+		}
+	}
+}
+
+.contact-info {
+	width: 100%;
+
+	h2 {
+		text-align: left;
+		padding: 0;
+		margin-bottom: 0.5em;
+	}
+
+	h4 {
+		text-transform: uppercase;
+		color: $colorOrange;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+}
+
+//responsive
+@media only screen and (min-width:605px) and (max-width: 810px) {
+	.contact-info {
+		h2 {
+			font-size: 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 604px) {
+	.contact {
+		display: flex;
+		flex-direction: column;
+
+		.contact-info {
+			order: 1;
+			text-align: center;
+			h2 {
+				text-align: center;
+			}
+		}
+		.wpforms-container-full {
+			order: 2;
+		}
+		.angkor-form form #wpforms-77-field_2 {
+			max-width: 100%;
+		}
+		.wpforms-submit-container {
+			text-align: center;
+		}
+	}
+
+	
+}

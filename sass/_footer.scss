@@ -1,0 +1,63 @@
+.site-footer {
+	padding: 1em 0 1em 0;
+
+	li{
+		list-style: none;
+		margin-bottom: 0;
+	}
+
+	.site-info {
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+
+	}
+
+	.site-info li {
+		padding: 1em;
+		line-height: 1em;
+	}
+
+	.site-info li a {
+		transition: all ease 0.3s;
+	}
+
+	.site-info li a:hover {
+		color: $colorOrange;
+	}
+
+	.site-info span{
+		margin-left: auto;
+		margin-top: auto;
+		padding-bottom: 1em;
+	}
+}
+
+//responsive
+@media only screen and (max-width: 700px){
+	.site-footer{
+		padding-top: 2em;
+		.site-info {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+
+	}
+		.site-info ul{
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.site-info span {
+			display: block;
+			text-align: center;
+		}
+	} 
+
+}
+
+@media only screen and (max-width: 350px){
+	.site-info li {
+		font-size: 14px;
+	}
+}

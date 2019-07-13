@@ -1,0 +1,79 @@
+//FONTS
+h1, #center-title, #upper-title, #lower-title {
+	font-family: $fontYant;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+
+#center-title {
+	font-weight: 900;
+}
+
+h2, .main-navigation, .menu-item, button,
+.cate-single-wrapper a, .product-wrapper {
+	font-family: $fontJosefinSlab;
+	font-weight: 700;
+}
+
+.site-footer {
+	font-family: $fontJosefinSlab;
+	font-weight: 600;
+}
+
+h3 {
+	font-family: $fontYant;
+	text-transform: uppercase;
+}
+
+body, h4, p, figcaption {
+	font-family: $fontCrimson;
+} 
+
+strong {
+	font-family: $fontCrimson;
+	font-weight: 700;
+}
+
+em {
+	font-family: $fontCrimson;
+	font-style: italic;
+}
+
+#center-title, #upper-title, #lower-title {
+	color: white;
+}
+
+//COLORS
+h1, h3 {
+	color: $colorOrange;
+}
+
+h2 {
+	color: $colorGold;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.menu-item a, figcaption {
+	color: $colorBrown;
+}
+
+.menu-item a:hover {
+	color: $colorOrange;
+}
+
+p, .site-info li a {
+	color: $colorDarkBrown;
+}
+
+a {
+	color: $colorOrange;
+}
+
+a:hover {
+	color: $colorBlue;
+}
+
+	
